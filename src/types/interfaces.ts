@@ -15,13 +15,13 @@ export interface IArticles {
 
 }
 
-export interface INewsResponce {
+export interface INewsResponse {
     status: string;
     totalResults: number;
     articles: IArticles[];
 }
 
-export interface ISourceResponce {
+export interface ISourceResponse {
     status: string;
     sources: ISource[];
 }

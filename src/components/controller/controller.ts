@@ -1,9 +1,9 @@
-import { INewsResponce, ISourceResponce } from '../../types/interfaces';
+import { INewsResponse, ISourceResponse } from '../../types/interfaces';
 import AppLoader from './appLoader';
 import { NewsCategory } from '../../types/enums';
 
 class AppController extends AppLoader {
-    getSources(callback: (data: ISourceResponce) => void): void {
+    getSources(callback: (data: ISourceResponse) => void): void {
         super.getResp(
             {
                 endpoint: 'sources',
@@ -15,7 +15,7 @@ class AppController extends AppLoader {
         );
     }
 
-    getNews(e: Event, callback: (data: INewsResponce) => void): void {
+    getNews(e: Event, callback: (data: INewsResponse) => void): void {
         let target = e.target as HTMLElement;
         const newsContainer = e.currentTarget as HTMLElement;
 
